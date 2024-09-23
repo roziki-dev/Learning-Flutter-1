@@ -13,6 +13,7 @@ class SplashScreen extends StatelessWidget {
         statusBarIconBrightness: Brightness.light));
 
     Future.delayed(const Duration(seconds: 3)).then((value) {
+      // ignore: use_build_context_synchronously
       Navigator.of(context).pushAndRemoveUntil(
           MaterialPageRoute(builder: (context) => const HomeScreen()),
           (route) => false);
@@ -24,7 +25,7 @@ class SplashScreen extends StatelessWidget {
         child: Center(
             child: RichText(
           text: TextSpan(
-            text: 'Belajar Flutter 1',
+            text: 'Movies\n',
             style: GoogleFonts.manrope(fontSize: 30, color: Colors.white),
           ),
         )),
